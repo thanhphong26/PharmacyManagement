@@ -11,14 +11,23 @@ using System.Windows.Forms;
 
 namespace PharmacyManagement
 {
-    public partial class Form1 : Form
+    public partial class FMain : Form
     {
-        public Form1()
+        public FMain()
         {
             InitializeComponent();
             FLogin flogin = new FLogin();
             Application.Run(flogin);
         }
 
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_MinSize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
