@@ -16,6 +16,8 @@ namespace PharmacyManagement
         public Form1()
         {
             InitializeComponent();
+            FLogin fMain = new FLogin();
+            Application.Run(fMain);
         }
 
     }
