@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,8 +16,8 @@ namespace PharmacyManagement
         public Form1()
         {
             InitializeComponent();
-            FLogin fMain = new FLogin();
-            Application.Run(fMain);
+            FLogin flogin = new FLogin();
+            Application.Run(flogin);
         }
 
     }
