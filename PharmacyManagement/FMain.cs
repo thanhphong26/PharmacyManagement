@@ -33,7 +33,7 @@ namespace PharmacyManagement
         {
             F_QLNhanVien form2 = new F_QLNhanVien(pn_main);
             form2.TopLevel = false;
-            panel1.Controls.Add(form2);
+            pn_main.Controls.Add(form2);
             form2.Show();
         }
         private void btn_NhanVien_Click(object sender, EventArgs e)
