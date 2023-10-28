@@ -34,5 +34,10 @@ namespace PharmacyManagement
         {
             addClass.Add_Form(new F_QLNhanVien(), pn_main);
         }
+
+        private void btn_TTCN_Click(object sender, EventArgs e)
+        {
+            addClass.Add_Form(new F_TTCaNhan(), pn_main);
+        }
     }
 }
