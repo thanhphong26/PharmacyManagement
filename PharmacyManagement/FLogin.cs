@@ -28,7 +28,7 @@ namespace PharmacyManagement
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            this.Close();
+            new FMain().Show();
         }
     }
 }
