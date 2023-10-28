@@ -17,8 +17,7 @@ namespace PharmacyManagement
         public FMain()
         {
             InitializeComponent();
-            FLogin flogin = new FLogin();
-            Application.Run(flogin);
+            
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
