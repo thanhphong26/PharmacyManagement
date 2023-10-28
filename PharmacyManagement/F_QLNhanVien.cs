@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,12 +10,18 @@ using System.Windows.Forms;
 
 namespace PharmacyManagement
 {
-    public partial class Form1 : Form
+    public partial class F_QLNhanVien : Form
     {
-        public Form1()
+        public F_QLNhanVien()
         {
             InitializeComponent();
         }
+        private Panel panelFromForm1;
 
+        public F_QLNhanVien(Panel panel)
+        {
+            InitializeComponent();
+            panelFromForm1 = panel;
+        }
     }
 }
