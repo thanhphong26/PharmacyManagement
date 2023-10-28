@@ -13,6 +13,7 @@ namespace PharmacyManagement
 {
     public partial class FMain : Form
     {
+        AddClass addClass = new AddClass();
         public FMain()
         {
             InitializeComponent();
@@ -29,16 +30,9 @@ namespace PharmacyManagement
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        private void AddForm2ToPanel()
-        {
-            F_QLNhanVien form2 = new F_QLNhanVien(pn_main);
-            form2.TopLevel = false;
-            pn_main.Controls.Add(form2);
-            form2.Show();
-        }
         private void btn_NhanVien_Click(object sender, EventArgs e)
         {
-            AddForm2ToPanel();
+            addClass.Add_Form(new F_QLNhanVien(), pn_main);
         }
     }
 }
