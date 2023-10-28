@@ -63,6 +63,12 @@
     <Compile Include="FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_TTCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_TTCaNhan.Designer.cs">
+      <DependentUpon>F_TTCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_QLNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_TTCaNhan.resx">
+      <DependentUpon>F_TTCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_QLNhanVien.resx">
       <DependentUpon>F_QLNhanVien.cs</DependentUpon>
