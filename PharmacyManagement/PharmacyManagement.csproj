@@ -63,6 +63,12 @@
     <Compile Include="FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_TrangChu.Designer.cs">
+      <DependentUpon>F_TrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_TTCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_TrangChu.resx">
+      <DependentUpon>F_TrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_TTCaNhan.resx">
       <DependentUpon>F_TTCaNhan.cs</DependentUpon>

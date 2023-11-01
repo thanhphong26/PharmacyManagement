@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace PharmacyManagement
 {
     public partial class FLogin : Form
     {
+        private string role;
         public FLogin()
         {
             InitializeComponent();
@@ -20,7 +22,7 @@ namespace PharmacyManagement
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn thoát không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(rs == DialogResult.Yes) 
+            if (rs == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -28,7 +30,24 @@ namespace PharmacyManagement
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            new FMain().Show();
+            if (rbtn_nv.Checked)
+            {
+                role = "CV01";
+            }
+            else if (rbtn_ql.Checked)
+            {
+                role = "CV02";
+            }
+            else
+            {
+                role = "CV03";
+            }
+                FMain main = new FMain();
+                main.MSNV = txt_TaiKhoan.Text;
+                main.Show();
+                this.Hide();
+            
+
         }
     }
 }
