@@ -63,6 +63,24 @@
     <Compile Include="FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_LSBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_LSBanHang.Designer.cs">
+      <DependentUpon>F_LSBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_LSGiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_LSGiaoDich.Designer.cs">
+      <DependentUpon>F_LSGiaoDich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_LSNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_LSNhapKho.Designer.cs">
+      <DependentUpon>F_LSNhapKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_TTCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +100,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_LSBanHang.resx">
+      <DependentUpon>F_LSBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_LSGiaoDich.resx">
+      <DependentUpon>F_LSGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_LSNhapKho.resx">
+      <DependentUpon>F_LSNhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_TTCaNhan.resx">
       <DependentUpon>F_TTCaNhan.cs</DependentUpon>
