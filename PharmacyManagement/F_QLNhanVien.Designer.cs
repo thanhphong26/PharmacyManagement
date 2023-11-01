@@ -1,4 +1,4 @@
-﻿namespace PharmacyManagement
+namespace PharmacyManagement
 {
     partial class F_QLNhanVien
     {
@@ -71,6 +71,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btn_Xoa);
             this.panel1.Controls.Add(this.btn_Sua);
             this.panel1.Controls.Add(this.btn_Them);
@@ -177,6 +178,13 @@
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.Size = new System.Drawing.Size(249, 31);
             this.txt_SDT.TabIndex = 10;
+            // 
+            // txt_Diachi
+            // 
+            this.txt_Diachi.Location = new System.Drawing.Point(181, 176);
+            this.txt_Diachi.Name = "txt_Diachi";
+            this.txt_Diachi.Size = new System.Drawing.Size(249, 31);
+            this.txt_Diachi.TabIndex = 8;
             // 
             // txt_Diachi
             // 
@@ -370,6 +378,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1440, 800);
             this.ControlBox = false;
             this.Controls.Add(this.label8);
