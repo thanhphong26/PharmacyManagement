@@ -18,7 +18,7 @@ namespace PharmacyManagement
         {
             try
             {
-                SqlConnection conn = new SqlConnection(Properties.Settings.Default.Pharmacy);
+                conn = new SqlConnection(Properties.Settings.Default.Pharmacy);
 
             }
             catch (Exception ex)
@@ -27,7 +27,7 @@ namespace PharmacyManagement
             }
         }
 
-        public DataTable SelectData(string sql, List<CustomParameter> lstpara)
+        public DataTable SelectData(string sql, List<CustomParameter> lstpara) //Lấy Db
         {
             try
             {
@@ -43,6 +43,43 @@ namespace PharmacyManagement
                     foreach (var para in lstpara)
                     {
                         cmd.Parameters.AddWithValue(para.key, para.value);
+                    }
+                }
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                //dt.Dispose();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Loi load Data " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Close();
+                }
+            }
+
+        }
+        public DataTable SelectDataViews(string sql, List<CustomParameter> lstpara) //Lấy Db
+        {
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                //sql = "exec  SelectAllSinhVien";
+                cmd = new SqlCommand(sql, conn);
+                if (lstpara != null)
+                {
+                    
+                    foreach (var para in lstpara)
+                    {
+                        cmd.Parameters.Add(para.key, SqlDbType.NChar).Value=para.value;
                     }
                 }
                 dt = new DataTable();
@@ -127,7 +164,7 @@ namespace PharmacyManagement
             }
             return result;
         }
-        public int Excute(string sql, List<CustomParameter> lstpara)
+        public int Excute(string sql, List<CustomParameter> lstpara)//insert update 
         {
             try
             {

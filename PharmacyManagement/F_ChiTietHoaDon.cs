@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace PharmacyManagement
 {
-    public partial class F_LSBanHang : Form
+    public partial class F_ChiTietHoaDon : Form
     {
-        public F_LSBanHang(DataTable dt)
+        public F_ChiTietHoaDon()
         {
             InitializeComponent();
-            dg_BanHang.DataSource = dt;
         }
     }
 }

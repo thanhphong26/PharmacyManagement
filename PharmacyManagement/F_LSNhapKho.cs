@@ -12,9 +12,11 @@ namespace PharmacyManagement
 {
     public partial class F_LSNhapKho : Form
     {
-        public F_LSNhapKho()
+        public F_LSNhapKho(DataTable dt)
         {
             InitializeComponent();
+            dg_NhapHang.DataSource = dt;
         }
+
     }
 }

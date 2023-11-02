@@ -239,7 +239,6 @@
             // 
             // pn_GiaoDich
             // 
-            this.pn_GiaoDich.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pn_GiaoDich.Location = new System.Drawing.Point(498, 12);
             this.pn_GiaoDich.Name = "pn_GiaoDich";
             this.pn_GiaoDich.Size = new System.Drawing.Size(930, 776);

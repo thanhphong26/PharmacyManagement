@@ -34,6 +34,7 @@ namespace PharmacyManagement
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cb_MaCV = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbo_MaCuaHang = new System.Windows.Forms.ComboBox();
             this.td_NgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -61,7 +62,6 @@ namespace PharmacyManagement
             this.col_ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_CuaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
-            this.cb_MaCV = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -133,6 +133,14 @@ namespace PharmacyManagement
             this.panel3.Size = new System.Drawing.Size(1085, 229);
             this.panel3.TabIndex = 1;
             // 
+            // cb_MaCV
+            // 
+            this.cb_MaCV.FormattingEnabled = true;
+            this.cb_MaCV.Location = new System.Drawing.Point(181, 68);
+            this.cb_MaCV.Name = "cb_MaCV";
+            this.cb_MaCV.Size = new System.Drawing.Size(249, 33);
+            this.cb_MaCV.TabIndex = 16;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -178,13 +186,6 @@ namespace PharmacyManagement
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.Size = new System.Drawing.Size(249, 31);
             this.txt_SDT.TabIndex = 10;
-            // 
-            // txt_Diachi
-            // 
-            this.txt_Diachi.Location = new System.Drawing.Point(181, 176);
-            this.txt_Diachi.Name = "txt_Diachi";
-            this.txt_Diachi.Size = new System.Drawing.Size(249, 31);
-            this.txt_Diachi.TabIndex = 8;
             // 
             // txt_Diachi
             // 
@@ -365,14 +366,6 @@ namespace PharmacyManagement
             this.label8.Size = new System.Drawing.Size(284, 31);
             this.label8.TabIndex = 2;
             this.label8.Text = "DANH SÁCH NHÂN VIÊN";
-            // 
-            // cb_MaCV
-            // 
-            this.cb_MaCV.FormattingEnabled = true;
-            this.cb_MaCV.Location = new System.Drawing.Point(181, 68);
-            this.cb_MaCV.Name = "cb_MaCV";
-            this.cb_MaCV.Size = new System.Drawing.Size(249, 33);
-            this.cb_MaCV.TabIndex = 16;
             // 
             // F_QLNhanVien
             // 

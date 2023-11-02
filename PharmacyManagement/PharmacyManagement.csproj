@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="AddClass.cs" />
     <Compile Include="CustomParameter.cs" />
-    <Compile Include="DatabaseConnect.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +63,12 @@
     </Compile>
     <Compile Include="FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_ChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ChiTietHoaDon.Designer.cs">
+      <DependentUpon>F_ChiTietHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="F_LSBanHang.cs">
       <SubType>Form</SubType>
@@ -94,6 +100,8 @@
     <Compile Include="F_QLNhanVien.Designer.cs">
       <DependentUpon>F_QLNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\CuaHangDAO.cs" />
+    <Compile Include="DAO\PhieuNhapDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FLogin.resx">
@@ -101,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ChiTietHoaDon.resx">
+      <DependentUpon>F_ChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_LSBanHang.resx">
       <DependentUpon>F_LSBanHang.cs</DependentUpon>
@@ -143,9 +154,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAO\" />
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
