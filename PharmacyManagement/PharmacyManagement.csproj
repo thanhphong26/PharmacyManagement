@@ -82,6 +82,12 @@
     <Compile Include="F_LSNhapKho.Designer.cs">
       <DependentUpon>F_LSNhapKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_TrangChu.Designer.cs">
+      <DependentUpon>F_TrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_TTCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>

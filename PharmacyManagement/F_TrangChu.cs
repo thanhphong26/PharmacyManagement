@@ -16,6 +16,5 @@ namespace PharmacyManagement
         {
             InitializeComponent();
         }
-
     }
 }
