@@ -73,5 +73,12 @@ namespace PharmacyManagement
             btn_TTCN.BackColor = Color.FromArgb(0, 255, 255);
             addClass.Add_Form(new F_LSGiaoDich(), pn_main);
         }
+
+        private void btn_BanHang_Click(object sender, EventArgs e)
+        {
+            reset_color();
+            btn_TTCN.BackColor = Color.FromArgb(0, 255, 255);
+            addClass.Add_Form(new FBanHang(), pn_main);
+        }
     }
 }
