@@ -28,22 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBanHang));
             this.pnHoaDon = new System.Windows.Forms.Panel();
             this.pnTTSp = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnCongCu = new System.Windows.Forms.Panel();
             this.cbbDanhMucChinh = new System.Windows.Forms.ComboBox();
             this.cbbLoai = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnDSSanPham = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.pnTTSp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnCongCu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnCongCu.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnHoaDon
@@ -57,46 +64,37 @@
             // 
             // pnTTSp
             // 
-            this.pnTTSp.Controls.Add(this.dataGridView1);
+            this.pnTTSp.Controls.Add(this.panel2);
+            this.pnTTSp.Controls.Add(this.panel1);
+            this.pnTTSp.Controls.Add(this.textBox4);
+            this.pnTTSp.Controls.Add(this.textBox3);
+            this.pnTTSp.Controls.Add(this.textBox2);
             this.pnTTSp.Controls.Add(this.textBox1);
-            this.pnTTSp.Controls.Add(this.label1);
-            this.pnTTSp.Controls.Add(this.pictureBox1);
             this.pnTTSp.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTTSp.Location = new System.Drawing.Point(0, 0);
             this.pnTTSp.Name = "pnTTSp";
-            this.pnTTSp.Padding = new System.Windows.Forms.Padding(50, 10, 0, 10);
+            this.pnTTSp.Padding = new System.Windows.Forms.Padding(50, 10, 60, 10);
             this.pnTTSp.Size = new System.Drawing.Size(2280, 500);
             this.pnTTSp.TabIndex = 1;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 102;
+            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.Size = new System.Drawing.Size(1154, 401);
+            this.dataGridView1.TabIndex = 3;
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(556, 247);
+            this.textBox1.Location = new System.Drawing.Point(550, 236);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(483, 247);
+            this.textBox1.Size = new System.Drawing.Size(500, 251);
             this.textBox1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1050, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tổng kho ";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::PharmacyManagement.Properties.Resources.Screenshot_2023_09_16_130552;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(50, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 480);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // pnCongCu
             // 
@@ -106,7 +104,7 @@
             this.pnCongCu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnCongCu.Location = new System.Drawing.Point(0, 500);
             this.pnCongCu.Name = "pnCongCu";
-            this.pnCongCu.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.pnCongCu.Padding = new System.Windows.Forms.Padding(50, 0, 60, 0);
             this.pnCongCu.Size = new System.Drawing.Size(2280, 80);
             this.pnCongCu.TabIndex = 2;
             // 
@@ -134,7 +132,7 @@
             // 
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(1653, 0);
+            this.txtSearch.Location = new System.Drawing.Point(1593, 0);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(627, 78);
             this.txtSearch.TabIndex = 0;
@@ -150,16 +148,76 @@
             this.pnDSSanPham.Size = new System.Drawing.Size(2280, 970);
             this.pnDSSanPham.TabIndex = 3;
             // 
-            // dataGridView1
+            // textBox2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dataGridView1.Location = new System.Drawing.Point(1272, 10);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 102;
-            this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(1008, 480);
-            this.dataGridView1.TabIndex = 3;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(550, 10);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(500, 61);
+            this.textBox2.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(550, 81);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(500, 38);
+            this.textBox3.TabIndex = 8;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(550, 154);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(500, 38);
+            this.textBox4.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1066, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1154, 480);
+            this.panel1.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(50, 10);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(494, 480);
+            this.panel2.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.Location = new System.Drawing.Point(825, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(329, 63);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.numericUpDown1);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 407);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.panel3.Size = new System.Drawing.Size(1154, 73);
+            this.panel3.TabIndex = 4;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(705, 5);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 61);
+            this.numericUpDown1.TabIndex = 5;
             // 
             // FBanHang
             // 
@@ -175,10 +233,12 @@
             this.Text = "FBanHang";
             this.pnTTSp.ResumeLayout(false);
             this.pnTTSp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnCongCu.ResumeLayout(false);
             this.pnCongCu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,9 +252,15 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox cbbDanhMucChinh;
         private System.Windows.Forms.ComboBox cbbLoai;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button1;
     }
 }
