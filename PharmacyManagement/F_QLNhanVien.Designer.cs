@@ -29,15 +29,16 @@ namespace PharmacyManagement
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_QLNhanVien));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cb_MaCV = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbo_MaCuaHang = new System.Windows.Forms.ComboBox();
+            this.cb_MaCuaHang = new System.Windows.Forms.ComboBox();
             this.td_NgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.txt_GioiTinh = new System.Windows.Forms.TextBox();
             this.txt_TenNV = new System.Windows.Forms.TextBox();
             this.txt_SDT = new System.Windows.Forms.TextBox();
             this.txt_Diachi = new System.Windows.Forms.TextBox();
@@ -49,7 +50,7 @@ namespace PharmacyManagement
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptb_NhanVien = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.col_MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,10 +62,11 @@ namespace PharmacyManagement
             this.col_ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_CuaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
-            this.cb_MaCV = new System.Windows.Forms.ComboBox();
+            this.rb_Nam = new System.Windows.Forms.RadioButton();
+            this.rb_Nu = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_NhanVien)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +78,7 @@ namespace PharmacyManagement
             this.panel1.Controls.Add(this.btn_Sua);
             this.panel1.Controls.Add(this.btn_Them);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.ptb_NhanVien);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1416, 315);
@@ -84,6 +86,7 @@ namespace PharmacyManagement
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.Location = new System.Drawing.Point(1168, 261);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(103, 51);
@@ -93,6 +96,7 @@ namespace PharmacyManagement
             // 
             // btn_Sua
             // 
+            this.btn_Sua.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.Location = new System.Drawing.Point(990, 261);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(103, 51);
@@ -102,6 +106,7 @@ namespace PharmacyManagement
             // 
             // btn_Them
             // 
+            this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.Location = new System.Drawing.Point(819, 261);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(103, 51);
@@ -111,11 +116,12 @@ namespace PharmacyManagement
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.rb_Nu);
+            this.panel3.Controls.Add(this.rb_Nam);
             this.panel3.Controls.Add(this.cb_MaCV);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.cbo_MaCuaHang);
+            this.panel3.Controls.Add(this.cb_MaCuaHang);
             this.panel3.Controls.Add(this.td_NgaySinh);
-            this.panel3.Controls.Add(this.txt_GioiTinh);
             this.panel3.Controls.Add(this.txt_TenNV);
             this.panel3.Controls.Add(this.txt_SDT);
             this.panel3.Controls.Add(this.txt_Diachi);
@@ -133,6 +139,14 @@ namespace PharmacyManagement
             this.panel3.Size = new System.Drawing.Size(1085, 229);
             this.panel3.TabIndex = 1;
             // 
+            // cb_MaCV
+            // 
+            this.cb_MaCV.FormattingEnabled = true;
+            this.cb_MaCV.Location = new System.Drawing.Point(181, 68);
+            this.cb_MaCV.Name = "cb_MaCV";
+            this.cb_MaCV.Size = new System.Drawing.Size(249, 33);
+            this.cb_MaCV.TabIndex = 16;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -143,27 +157,22 @@ namespace PharmacyManagement
             this.label9.TabIndex = 15;
             this.label9.Text = "Mã cửa hàng";
             // 
-            // cbo_MaCuaHang
+            // cb_MaCuaHang
             // 
-            this.cbo_MaCuaHang.FormattingEnabled = true;
-            this.cbo_MaCuaHang.Location = new System.Drawing.Point(685, 182);
-            this.cbo_MaCuaHang.Name = "cbo_MaCuaHang";
-            this.cbo_MaCuaHang.Size = new System.Drawing.Size(291, 33);
-            this.cbo_MaCuaHang.TabIndex = 14;
+            this.cb_MaCuaHang.FormattingEnabled = true;
+            this.cb_MaCuaHang.Location = new System.Drawing.Point(685, 182);
+            this.cb_MaCuaHang.Name = "cb_MaCuaHang";
+            this.cb_MaCuaHang.Size = new System.Drawing.Size(291, 33);
+            this.cb_MaCuaHang.TabIndex = 14;
             // 
             // td_NgaySinh
             // 
+            this.td_NgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.td_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.td_NgaySinh.Location = new System.Drawing.Point(685, 126);
             this.td_NgaySinh.Name = "td_NgaySinh";
             this.td_NgaySinh.Size = new System.Drawing.Size(291, 31);
             this.td_NgaySinh.TabIndex = 13;
-            // 
-            // txt_GioiTinh
-            // 
-            this.txt_GioiTinh.Location = new System.Drawing.Point(685, 76);
-            this.txt_GioiTinh.Name = "txt_GioiTinh";
-            this.txt_GioiTinh.Size = new System.Drawing.Size(291, 31);
-            this.txt_GioiTinh.TabIndex = 12;
             // 
             // txt_TenNV
             // 
@@ -178,13 +187,6 @@ namespace PharmacyManagement
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.Size = new System.Drawing.Size(249, 31);
             this.txt_SDT.TabIndex = 10;
-            // 
-            // txt_Diachi
-            // 
-            this.txt_Diachi.Location = new System.Drawing.Point(181, 176);
-            this.txt_Diachi.Name = "txt_Diachi";
-            this.txt_Diachi.Size = new System.Drawing.Size(249, 31);
-            this.txt_Diachi.TabIndex = 8;
             // 
             // txt_Diachi
             // 
@@ -256,9 +258,9 @@ namespace PharmacyManagement
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(26, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 25);
+            this.label2.Size = new System.Drawing.Size(76, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Mã chức vụ";
+            this.label2.Text = "Chức vụ";
             // 
             // label1
             // 
@@ -270,15 +272,15 @@ namespace PharmacyManagement
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã nhân viên";
             // 
-            // pictureBox1
+            // ptb_NhanVien
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(71, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ptb_NhanVien.Image = ((System.Drawing.Image)(resources.GetObject("ptb_NhanVien.Image")));
+            this.ptb_NhanVien.Location = new System.Drawing.Point(71, 49);
+            this.ptb_NhanVien.Name = "ptb_NhanVien";
+            this.ptb_NhanVien.Size = new System.Drawing.Size(146, 151);
+            this.ptb_NhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb_NhanVien.TabIndex = 0;
+            this.ptb_NhanVien.TabStop = false;
             // 
             // panel2
             // 
@@ -291,6 +293,14 @@ namespace PharmacyManagement
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_MaNV,
@@ -366,13 +376,25 @@ namespace PharmacyManagement
             this.label8.TabIndex = 2;
             this.label8.Text = "DANH SÁCH NHÂN VIÊN";
             // 
-            // cb_MaCV
+            // rb_Nam
             // 
-            this.cb_MaCV.FormattingEnabled = true;
-            this.cb_MaCV.Location = new System.Drawing.Point(181, 68);
-            this.cb_MaCV.Name = "cb_MaCV";
-            this.cb_MaCV.Size = new System.Drawing.Size(249, 33);
-            this.cb_MaCV.TabIndex = 16;
+            this.rb_Nam.AutoSize = true;
+            this.rb_Nam.Location = new System.Drawing.Point(685, 80);
+            this.rb_Nam.Name = "rb_Nam";
+            this.rb_Nam.Size = new System.Drawing.Size(71, 29);
+            this.rb_Nam.TabIndex = 17;
+            this.rb_Nam.Text = "Nam";
+            this.rb_Nam.UseVisualStyleBackColor = true;
+            // 
+            // rb_Nu
+            // 
+            this.rb_Nu.AutoSize = true;
+            this.rb_Nu.Location = new System.Drawing.Point(828, 80);
+            this.rb_Nu.Name = "rb_Nu";
+            this.rb_Nu.Size = new System.Drawing.Size(57, 29);
+            this.rb_Nu.TabIndex = 18;
+            this.rb_Nu.Text = "Nữ";
+            this.rb_Nu.UseVisualStyleBackColor = true;
             // 
             // F_QLNhanVien
             // 
@@ -387,10 +409,11 @@ namespace PharmacyManagement
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "F_QLNhanVien";
             this.Text = "F_QLNhanVien";
+            this.Load += new System.EventHandler(this.F_QLNhanVien_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_NhanVien)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -402,7 +425,7 @@ namespace PharmacyManagement
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptb_NhanVien;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -412,7 +435,6 @@ namespace PharmacyManagement
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker td_NgaySinh;
-        private System.Windows.Forms.TextBox txt_GioiTinh;
         private System.Windows.Forms.TextBox txt_TenNV;
         private System.Windows.Forms.TextBox txt_SDT;
         private System.Windows.Forms.TextBox txt_Diachi;
@@ -431,7 +453,9 @@ namespace PharmacyManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn col_ChucVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_CuaHang;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbo_MaCuaHang;
+        private System.Windows.Forms.ComboBox cb_MaCuaHang;
         private System.Windows.Forms.ComboBox cb_MaCV;
+        private System.Windows.Forms.RadioButton rb_Nu;
+        private System.Windows.Forms.RadioButton rb_Nam;
     }
 }

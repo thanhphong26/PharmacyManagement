@@ -15,12 +15,17 @@ namespace PharmacyManagement
 {
     public partial class FMain : Form
     {
-        private String msnv = null;
-        String MCH = null;
-        public String MSNV
+        private string msnv = null;
+        private string mch = null;
+        public string MSNV
         {
             get { return msnv; }
             set { msnv = value;}
+        }
+        public string MCH
+        {
+            get { return mch; }
+            set { mch = value; }
         }
         AddClass addClass = new AddClass();
         public FMain()
@@ -45,14 +50,18 @@ namespace PharmacyManagement
         {
             reset_color();
             btn_NhanVien.BackColor = Color.FromArgb(0, 255, 255);
-            addClass.Add_Form(new F_QLNhanVien(), pn_main);
+            F_QLNhanVien f = new F_QLNhanVien();
+            f.SetForm1Reference(this);
+            addClass.Add_Form(f, pn_main);
         }
 
         private void btn_TTCN_Click(object sender, EventArgs e)
         {
             reset_color();
             btn_TTCN.BackColor = Color.FromArgb(0, 255, 255);
-            addClass.Add_Form(new F_TTCaNhan(), pn_main);
+            F_TTCaNhan f = new F_TTCaNhan();
+            f.SetForm1Reference(this);
+            addClass.Add_Form(f, pn_main);
         }
 
         private void btn_TrangChu_Click(object sender, EventArgs e)

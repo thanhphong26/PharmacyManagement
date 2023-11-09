@@ -14,6 +14,7 @@ namespace PharmacyManagement
     public partial class FLogin : Form
     {
         private string role;
+        FMain main = new FMain();
         public FLogin()
         {
             InitializeComponent();
@@ -42,12 +43,17 @@ namespace PharmacyManagement
             {
                 role = "CV03";
             }
-                FMain main = new FMain();
+
                 main.MSNV = txt_TaiKhoan.Text;
+
+
+            //Kiểm tra đăng nhập
+            //Lấy mã cửa hàng
+            //Nhận Role
+            main.MCH = "CH01";
                 main.Show();
                 this.Hide();
-            
-
         }
+
     }
 }

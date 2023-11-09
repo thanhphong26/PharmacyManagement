@@ -18,7 +18,7 @@ namespace PharmacyManagement
         {
             try
             {
-                SqlConnection conn = new SqlConnection(Properties.Settings.Default.Pharmacy);
+                conn = new SqlConnection(Properties.Settings.Default.Pharmacy);
 
             }
             catch (Exception ex)
