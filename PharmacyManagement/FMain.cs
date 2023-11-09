@@ -59,7 +59,6 @@ namespace PharmacyManagement
         {
             reset_color();
             btn_TrangChu.BackColor = Color.FromArgb(0, 255, 255);
-            //addClass.Add_Form(new F_TrangChu(), pn_main);
         }
         
         private void FMain_Load(object sender, EventArgs e)
@@ -78,7 +77,7 @@ namespace PharmacyManagement
         {
             reset_color();
             btn_TTCN.BackColor = Color.FromArgb(0, 255, 255);
-            addClass.Add_Form(new FBanHang(), pn_main);
+            addClass.Add_Form(new F_BanHang("CH01"), pn_main);
         }
     }
 }

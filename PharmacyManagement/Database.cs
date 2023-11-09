@@ -194,6 +194,36 @@ namespace PharmacyManagement
                 }
             }
         }
+        public int ExcuteSQL(string sql, List<CustomParameter> lstpara)//insert update 
+        {
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                cmd = new SqlCommand(sql, conn);
+                
+                foreach (var p in lstpara)
+                {
+                    cmd.Parameters.Add(p.key, SqlDbType.NChar).Value = p.value;
+                }
+                var rs = cmd.ExecuteNonQuery();
+                return (int)rs;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Loi thuc thi cau lenh " + ex.Message);
+                return -100;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Close();
+                }
+            }
+        }
     }
 }
 

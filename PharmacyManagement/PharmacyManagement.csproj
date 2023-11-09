@@ -50,8 +50,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddClass.cs" />
+    <Compile Include="Chuyen.cs" />
     <Compile Include="CustomParameter.cs" />
+    <Compile Include="DAO\F1SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DAO\F1SanPham.designer.cs">
+      <DependentUpon>F1SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\LoaiSanPhamDAO.cs" />
+    <Compile Include="DAO\LoDAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DAO\XuatHangDAO.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="FHoaDonKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHoaDonKH.Designer.cs">
+      <DependentUpon>FHoaDonKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +82,12 @@
     </Compile>
     <Compile Include="FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_BanHang.Designer.cs">
+      <DependentUpon>F_BanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="F_ChiTietHoaDon.cs">
       <SubType>Form</SubType>
@@ -88,6 +113,11 @@
     <Compile Include="F_LSNhapKho.Designer.cs">
       <DependentUpon>F_LSNhapKho.cs</DependentUpon>
     </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="F_TTCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,11 +134,20 @@
     <Compile Include="DAO\PhieuNhapDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DAO\F1SanPham.resx">
+      <DependentUpon>F1SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHoaDonKH.resx">
+      <DependentUpon>FHoaDonKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_BanHang.resx">
+      <DependentUpon>F_BanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_ChiTietHoaDon.resx">
       <DependentUpon>F_ChiTietHoaDon.cs</DependentUpon>
@@ -122,8 +161,9 @@
     <EmbeddedResource Include="F_LSNhapKho.resx">
       <DependentUpon>F_LSNhapKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_TrangChu.resx">
-      <DependentUpon>F_TrangChu.cs</DependentUpon>
+    <EmbeddedResource Include=".resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="F_TTCaNhan.resx">
       <DependentUpon>F_TTCaNhan.cs</DependentUpon>
