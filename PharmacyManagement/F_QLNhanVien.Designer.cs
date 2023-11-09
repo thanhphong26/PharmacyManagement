@@ -34,11 +34,12 @@ namespace PharmacyManagement
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.rdio_Nu = new System.Windows.Forms.RadioButton();
+            this.rdio_Nam = new System.Windows.Forms.RadioButton();
             this.cb_MaCV = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbo_MaCuaHang = new System.Windows.Forms.ComboBox();
-            this.td_NgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.txt_GioiTinh = new System.Windows.Forms.TextBox();
+            this.dt_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txt_TenNV = new System.Windows.Forms.TextBox();
             this.txt_SDT = new System.Windows.Forms.TextBox();
             this.txt_Diachi = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@ namespace PharmacyManagement
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.col_MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,21 +62,24 @@ namespace PharmacyManagement
             this.col_ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_CuaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
+            this.ptb_NhanVien = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btn_ChonAnh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_NhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_ChonAnh);
+            this.panel1.Controls.Add(this.ptb_NhanVien);
             this.panel1.Controls.Add(this.btn_Xoa);
             this.panel1.Controls.Add(this.btn_Sua);
             this.panel1.Controls.Add(this.btn_Them);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1416, 315);
@@ -102,20 +105,23 @@ namespace PharmacyManagement
             // 
             // btn_Them
             // 
+            this.btn_Them.BackColor = System.Drawing.Color.White;
             this.btn_Them.Location = new System.Drawing.Point(819, 261);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(103, 51);
             this.btn_Them.TabIndex = 2;
             this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.rdio_Nu);
+            this.panel3.Controls.Add(this.rdio_Nam);
             this.panel3.Controls.Add(this.cb_MaCV);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.cbo_MaCuaHang);
-            this.panel3.Controls.Add(this.td_NgaySinh);
-            this.panel3.Controls.Add(this.txt_GioiTinh);
+            this.panel3.Controls.Add(this.dt_NgaySinh);
             this.panel3.Controls.Add(this.txt_TenNV);
             this.panel3.Controls.Add(this.txt_SDT);
             this.panel3.Controls.Add(this.txt_Diachi);
@@ -132,6 +138,28 @@ namespace PharmacyManagement
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1085, 229);
             this.panel3.TabIndex = 1;
+            // 
+            // rdio_Nu
+            // 
+            this.rdio_Nu.AutoSize = true;
+            this.rdio_Nu.Location = new System.Drawing.Point(785, 74);
+            this.rdio_Nu.Name = "rdio_Nu";
+            this.rdio_Nu.Size = new System.Drawing.Size(57, 29);
+            this.rdio_Nu.TabIndex = 18;
+            this.rdio_Nu.TabStop = true;
+            this.rdio_Nu.Text = "Nữ";
+            this.rdio_Nu.UseVisualStyleBackColor = true;
+            // 
+            // rdio_Nam
+            // 
+            this.rdio_Nam.AutoSize = true;
+            this.rdio_Nam.Location = new System.Drawing.Point(685, 74);
+            this.rdio_Nam.Name = "rdio_Nam";
+            this.rdio_Nam.Size = new System.Drawing.Size(71, 29);
+            this.rdio_Nam.TabIndex = 17;
+            this.rdio_Nam.TabStop = true;
+            this.rdio_Nam.Text = "Nam";
+            this.rdio_Nam.UseVisualStyleBackColor = true;
             // 
             // cb_MaCV
             // 
@@ -159,19 +187,14 @@ namespace PharmacyManagement
             this.cbo_MaCuaHang.Size = new System.Drawing.Size(291, 33);
             this.cbo_MaCuaHang.TabIndex = 14;
             // 
-            // td_NgaySinh
+            // dt_NgaySinh
             // 
-            this.td_NgaySinh.Location = new System.Drawing.Point(685, 126);
-            this.td_NgaySinh.Name = "td_NgaySinh";
-            this.td_NgaySinh.Size = new System.Drawing.Size(291, 31);
-            this.td_NgaySinh.TabIndex = 13;
-            // 
-            // txt_GioiTinh
-            // 
-            this.txt_GioiTinh.Location = new System.Drawing.Point(685, 76);
-            this.txt_GioiTinh.Name = "txt_GioiTinh";
-            this.txt_GioiTinh.Size = new System.Drawing.Size(291, 31);
-            this.txt_GioiTinh.TabIndex = 12;
+            this.dt_NgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dt_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_NgaySinh.Location = new System.Drawing.Point(685, 126);
+            this.dt_NgaySinh.Name = "dt_NgaySinh";
+            this.dt_NgaySinh.Size = new System.Drawing.Size(291, 31);
+            this.dt_NgaySinh.TabIndex = 13;
             // 
             // txt_TenNV
             // 
@@ -271,16 +294,6 @@ namespace PharmacyManagement
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã nhân viên";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(71, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView1);
@@ -367,6 +380,32 @@ namespace PharmacyManagement
             this.label8.TabIndex = 2;
             this.label8.Text = "DANH SÁCH NHÂN VIÊN";
             // 
+            // ptb_NhanVien
+            // 
+            this.ptb_NhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ptb_NhanVien.Image = ((System.Drawing.Image)(resources.GetObject("ptb_NhanVien.Image")));
+            this.ptb_NhanVien.Location = new System.Drawing.Point(67, 46);
+            this.ptb_NhanVien.Name = "ptb_NhanVien";
+            this.ptb_NhanVien.Size = new System.Drawing.Size(163, 184);
+            this.ptb_NhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_NhanVien.TabIndex = 5;
+            this.ptb_NhanVien.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btn_ChonAnh
+            // 
+            this.btn_ChonAnh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ChonAnh.Location = new System.Drawing.Point(95, 251);
+            this.btn_ChonAnh.Name = "btn_ChonAnh";
+            this.btn_ChonAnh.Size = new System.Drawing.Size(105, 47);
+            this.btn_ChonAnh.TabIndex = 6;
+            this.btn_ChonAnh.Text = "Chọn ảnh";
+            this.btn_ChonAnh.UseVisualStyleBackColor = true;
+            this.btn_ChonAnh.Click += new System.EventHandler(this.btn_ChonAnh_Click);
+            // 
             // F_QLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -383,9 +422,9 @@ namespace PharmacyManagement
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_NhanVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,7 +434,6 @@ namespace PharmacyManagement
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -404,8 +442,7 @@ namespace PharmacyManagement
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker td_NgaySinh;
-        private System.Windows.Forms.TextBox txt_GioiTinh;
+        private System.Windows.Forms.DateTimePicker dt_NgaySinh;
         private System.Windows.Forms.TextBox txt_TenNV;
         private System.Windows.Forms.TextBox txt_SDT;
         private System.Windows.Forms.TextBox txt_Diachi;
@@ -426,5 +463,10 @@ namespace PharmacyManagement
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbo_MaCuaHang;
         private System.Windows.Forms.ComboBox cb_MaCV;
+        private System.Windows.Forms.RadioButton rdio_Nu;
+        private System.Windows.Forms.RadioButton rdio_Nam;
+        private System.Windows.Forms.Button btn_ChonAnh;
+        private System.Windows.Forms.PictureBox ptb_NhanVien;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

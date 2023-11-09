@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace PharmacyManagement
 {
-    public partial class F_TTCaNhan : Form
+    public partial class F_DoanhThu : Form
     {
-        public F_TTCaNhan()
+        public F_DoanhThu()
         {
             InitializeComponent();
         }
-
     }
 }

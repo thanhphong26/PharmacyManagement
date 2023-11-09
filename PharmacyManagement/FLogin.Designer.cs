@@ -50,7 +50,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(1160, -54);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(63, 44);
             this.button1.TabIndex = 6;
@@ -62,7 +62,7 @@
             this.rbtn_ad.AutoSize = true;
             this.rbtn_ad.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtn_ad.Location = new System.Drawing.Point(453, 198);
-            this.rbtn_ad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtn_ad.Margin = new System.Windows.Forms.Padding(4);
             this.rbtn_ad.Name = "rbtn_ad";
             this.rbtn_ad.Size = new System.Drawing.Size(116, 41);
             this.rbtn_ad.TabIndex = 8;
@@ -74,7 +74,7 @@
             this.rbtn_ql.AutoSize = true;
             this.rbtn_ql.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtn_ql.Location = new System.Drawing.Point(265, 198);
-            this.rbtn_ql.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtn_ql.Margin = new System.Windows.Forms.Padding(4);
             this.rbtn_ql.Name = "rbtn_ql";
             this.rbtn_ql.Size = new System.Drawing.Size(129, 41);
             this.rbtn_ql.TabIndex = 7;
@@ -87,7 +87,7 @@
             this.rbtn_nv.Checked = true;
             this.rbtn_nv.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtn_nv.Location = new System.Drawing.Point(55, 198);
-            this.rbtn_nv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtn_nv.Margin = new System.Windows.Forms.Padding(4);
             this.rbtn_nv.Name = "rbtn_nv";
             this.rbtn_nv.Size = new System.Drawing.Size(158, 41);
             this.rbtn_nv.TabIndex = 6;
@@ -101,7 +101,7 @@
             this.btn_DangNhap.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangNhap.ForeColor = System.Drawing.Color.White;
             this.btn_DangNhap.Location = new System.Drawing.Point(211, 507);
-            this.btn_DangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_DangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(207, 68);
             this.btn_DangNhap.TabIndex = 5;
@@ -113,19 +113,19 @@
             // 
             this.txt_MatKhau.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MatKhau.Location = new System.Drawing.Point(195, 407);
-            this.txt_MatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.PasswordChar = '*';
-            this.txt_MatKhau.Size = new System.Drawing.Size(372, 38);
+            this.txt_MatKhau.Size = new System.Drawing.Size(313, 38);
             this.txt_MatKhau.TabIndex = 4;
             // 
             // txt_TaiKhoan
             // 
             this.txt_TaiKhoan.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TaiKhoan.Location = new System.Drawing.Point(203, 297);
-            this.txt_TaiKhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TaiKhoan.Name = "txt_TaiKhoan";
-            this.txt_TaiKhoan.Size = new System.Drawing.Size(372, 38);
+            this.txt_TaiKhoan.Size = new System.Drawing.Size(305, 38);
             this.txt_TaiKhoan.TabIndex = 3;
             // 
             // label3
@@ -166,7 +166,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(516, 59);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(557, 550);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,7 +179,7 @@
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.ForeColor = System.Drawing.Color.White;
             this.btn_Exit.Location = new System.Drawing.Point(1009, 15);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(48, 38);
             this.btn_Exit.TabIndex = 7;
@@ -206,7 +206,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FMain";

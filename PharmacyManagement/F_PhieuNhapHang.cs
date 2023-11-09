@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PharmacyManagement
 {
-    public partial class F_TrangChu : Form
+    public partial class F_PhieuNhapHang : Form
     {
-        public F_TrangChu()
+        public F_PhieuNhapHang()
         {
             InitializeComponent();
         }

@@ -51,6 +51,9 @@
   <ItemGroup>
     <Compile Include="AddClass.cs" />
     <Compile Include="CustomParameter.cs" />
+    <Compile Include="DAO\ChucVuDAO.cs" />
+    <Compile Include="DAO\KhoDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
@@ -63,6 +66,36 @@
     </Compile>
     <Compile Include="FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_DoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_DoanhThu.Designer.cs">
+      <DependentUpon>F_DoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_PhieuNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_PhieuNhapHang.Designer.cs">
+      <DependentUpon>F_PhieuNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_QuanLyKhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_QuanLyKhoHang.Designer.cs">
+      <DependentUpon>F_QuanLyKhoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_ThemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ThemSanPham.Designer.cs">
+      <DependentUpon>F_ThemSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_ThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ThongTinCaNhan.Designer.cs">
+      <DependentUpon>F_ThongTinCaNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="F_ChiTietHoaDon.cs">
       <SubType>Form</SubType>
@@ -88,11 +121,11 @@
     <Compile Include="F_LSNhapKho.Designer.cs">
       <DependentUpon>F_LSNhapKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_TTCaNhan.cs">
+    <Compile Include="F_TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_TTCaNhan.Designer.cs">
-      <DependentUpon>F_TTCaNhan.cs</DependentUpon>
+    <Compile Include="F_TrangChu.Designer.cs">
+      <DependentUpon>F_TrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="F_QLNhanVien.cs">
       <SubType>Form</SubType>
@@ -113,6 +146,9 @@
     <EmbeddedResource Include="F_ChiTietHoaDon.resx">
       <DependentUpon>F_ChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_DoanhThu.resx">
+      <DependentUpon>F_DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_LSBanHang.resx">
       <DependentUpon>F_LSBanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,11 +158,20 @@
     <EmbeddedResource Include="F_LSNhapKho.resx">
       <DependentUpon>F_LSNhapKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_PhieuNhapHang.resx">
+      <DependentUpon>F_PhieuNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_QuanLyKhoHang.resx">
+      <DependentUpon>F_QuanLyKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ThemSanPham.resx">
+      <DependentUpon>F_ThemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ThongTinCaNhan.resx">
+      <DependentUpon>F_ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_TrangChu.resx">
       <DependentUpon>F_TrangChu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="F_TTCaNhan.resx">
-      <DependentUpon>F_TTCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_QLNhanVien.resx">
       <DependentUpon>F_QLNhanVien.cs</DependentUpon>

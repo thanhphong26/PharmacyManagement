@@ -181,9 +181,9 @@ namespace PharmacyManagement
                 var rs = cmd.ExecuteNonQuery();
                 return (int)rs;
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show("Loi thuc thi cau lenh " + ex.Message);
+                MessageBox.Show(ex.Message);
                 return -100;
             }
             finally

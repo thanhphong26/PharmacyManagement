@@ -9,6 +9,6 @@ namespace PharmacyManagement
     public class CustomParameter
     {
         public string key { get; set; }
-        public string value { get; set; }
+        public object value { get; set; }
     }
 }

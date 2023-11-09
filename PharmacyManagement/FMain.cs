@@ -52,14 +52,14 @@ namespace PharmacyManagement
         {
             reset_color();
             btn_TTCN.BackColor = Color.FromArgb(0, 255, 255);
-            addClass.Add_Form(new F_TTCaNhan(), pn_main);
+            addClass.Add_Form(new F_ThongTinCaNhan(), pn_main);
         }
 
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
             reset_color();
             btn_TrangChu.BackColor = Color.FromArgb(0, 255, 255);
-            //addClass.Add_Form(new F_TrangChu(), pn_main);
+            addClass.Add_Form(new F_TrangChu(), pn_main);
         }
         
         private void FMain_Load(object sender, EventArgs e)
@@ -70,8 +70,22 @@ namespace PharmacyManagement
         private void btn_LSGD_Click(object sender, EventArgs e)
         {
             reset_color();
-            btn_TTCN.BackColor = Color.FromArgb(0, 255, 255);
+            btn_LSGD.BackColor = Color.FromArgb(0, 255, 255);
             addClass.Add_Form(new F_LSGiaoDich(), pn_main);
+        }
+
+        private void btn_QLKH_Click(object sender, EventArgs e)
+        {
+            reset_color();
+            btn_QLKH.BackColor = Color.FromArgb(0, 255, 255);
+            addClass.Add_Form(new F_QuanLyKhoHang(), pn_main);
+        }
+
+        private void btn_DoanhThu_Click(object sender, EventArgs e)
+        {
+            reset_color();
+            btn_DoanhThu.BackColor = Color.FromArgb(0, 255, 255);
+            addClass.Add_Form(new F_DoanhThu(), pn_main);
         }
     }
 }
