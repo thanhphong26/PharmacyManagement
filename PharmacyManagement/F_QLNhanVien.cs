@@ -20,19 +20,42 @@ namespace PharmacyManagement
         DataBase db=new DataBase();
         CuaHangDAO cuahang=new CuaHangDAO();
         ChucVuDAO chucvu=new ChucVuDAO();
+        NhanVienDAO nhanvien = new NhanVienDAO();
+        ConvertImage image=new ConvertImage();
         private byte[] pic = null;
+        private string mch, mnv;
+        private FMain form = null;
         public F_QLNhanVien()
         {
             InitializeComponent();
             LoadComboBox();
+        }
+        public void SetFormReference(FMain form)
+        {
+            this.form = form;
+        }
+        private void Reset()
+        {
+            txt_MaNV.ResetText();
+            txt_TenNV.ResetText();
+            cb_MaCV.ResetText();
+            rdio_Nam.Checked = false;
+            rdio_Nu.Checked = false;
+            txt_SDT.ResetText();
+            dt_NgaySinh.ResetText();
+            txt_Diachi.ResetText();
+            cbo_MaCuaHang.ResetText();
+            ptb_NhanVien.Image = null;
+            dg_NhanVien.Refresh();
         }
         public void LoadComboBox()
         {
             cbo_MaCuaHang.DisplayMember = "MaCuaHang";
             cbo_MaCuaHang.DataSource = cuahang.DS_CuaHang();
 
-            cb_MaCV.DisplayMember = "MaChucVu";
-            cb_MaCV.DataSource=chucvu.DS_ChucVu();
+            cb_MaCV.DisplayMember = "TenChucVu";
+            cb_MaCV.ValueMember = "MaChucVu";
+            cb_MaCV.DataSource = chucvu.DS_ChucVu();
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -61,7 +84,7 @@ namespace PharmacyManagement
             lstpara.Add(new CustomParameter()
             {
                 key = "@GioiTinh",
-                value = (rdio_Nam.Checked==true? 0:1)
+                value = (rdio_Nam.Checked==true?"0":"1")
             });
             lstpara.Add(new CustomParameter()
             {
@@ -71,7 +94,7 @@ namespace PharmacyManagement
             lstpara.Add(new CustomParameter()
             {
                 key = "@MaChucVu",
-                value = cb_MaCV.Text
+                value = cb_MaCV.SelectedValue.ToString()
             });
             lstpara.Add(new CustomParameter()
             {
@@ -82,6 +105,7 @@ namespace PharmacyManagement
             {
                 key = "@Image",
                 value =pic
+
             });
             int cmd = db.Excute("proc_ThemNhanVien", lstpara);
             if (cmd > 0)
@@ -93,6 +117,112 @@ namespace PharmacyManagement
             {
                 MessageBox.Show("Không thể thêm mới");
             }
+        }
+
+        private void F_QLNhanVien_Load(object sender, EventArgs e)
+        {
+            Reset();
+            mch = form.MCH;
+            MessageBox.Show(mch);
+            LoadComboBox();
+            if (mch != "")
+            {
+                cbo_MaCuaHang.Text = mch;
+                cb_MaCV.Enabled = false;
+                cbo_MaCuaHang.Enabled = false;
+            }
+            else
+            {
+                mch = "%";
+                cb_MaCV.Enabled = true;
+                cbo_MaCuaHang.Enabled = true;
+            }
+
+            dg_NhanVien.DataSource = nhanvien.DanhSachNhanVien(mch);
+        }
+
+        private void dg_NhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_MaNV.Text = Convert.ToString(dg_NhanVien.CurrentRow.Cells[0].Value);
+            txt_TenNV.Text = Convert.ToString(dg_NhanVien.CurrentRow.Cells[1].Value);
+            dt_NgaySinh.Value = Convert.ToDateTime(dg_NhanVien.CurrentRow.Cells[2].Value);
+            txt_SDT.Text = Convert.ToString(dg_NhanVien.CurrentRow.Cells[3].Value);
+            if (Convert.ToInt32(dg_NhanVien.CurrentRow.Cells[4].Value) == 0)
+                rdio_Nam.Checked = true;
+            else
+                rdio_Nu.Checked = true;
+            txt_Diachi.Text = Convert.ToString(dg_NhanVien.CurrentRow.Cells[5].Value);
+            cbo_MaCuaHang.SelectedIndex = cbo_MaCuaHang.FindString(Convert.ToString(dg_NhanVien.CurrentRow.Cells[7].Value));
+            cb_MaCV.SelectedIndex = cb_MaCV.FindString(Convert.ToString(dg_NhanVien.CurrentRow.Cells[6].Value));
+            ptb_NhanVien.Image = image.ConvertToImage((byte[])dg_NhanVien.CurrentRow.Cells[8].Value);
+        }
+
+        private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            FileStream fs = new FileStream(ptb_NhanVien.ImageLocation, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            pic = br.ReadBytes((int)fs.Length);
+            List<CustomParameter> lstpara = new List<CustomParameter>();
+            lstpara.Add(new CustomParameter()
+            {
+                key = "@MaNhanVien",
+                value = txt_MaNV.Text
+            });
+            lstpara.Add(new CustomParameter()
+            {
+                key = "@TenNhanVien",
+                value = txt_TenNV.Text
+            });
+            lstpara.Add(new CustomParameter()
+            {
+                key = "@NgaySinh",
+                value = dt_NgaySinh.Value.Date.ToString("yyyy-MM-dd")
+            });
+            lstpara.Add(new CustomParameter()
+            {
+                key = "@SDT",
+                value = txt_SDT.Text
+            });
+            lstpara.Add(new CustomParameter()
+            {
+                key = "@GioiTinh",
+                value = (rdio_Nam.Checked == true ? "0" : "1")
+            });
+            lstpara.Add(new CustomParameter()
+            {
+                key = "@DiaChi",
+                value = txt_Diachi.Text
+            });
+            lstpara.Add(new CustomParameter()
+            {
+                key = "@MaChucVu",
+                value = cb_MaCV.SelectedValue.ToString()
+            });
+            lstpara.Add(new CustomParameter()
+            {
+                key = "@MaCuaHang",
+                value = cbo_MaCuaHang.Text
+            });
+            lstpara.Add(new CustomParameter()
+            {
+                key = "@Image",
+                value = pic
+            });
+            if (nhanvien.Update(lstpara) != -100)
+                MessageBox.Show("Sửa thành công!");
+            F_QLNhanVien_Load(sender, e);
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            if (nhanvien.Delete(txt_MaNV.Text) != -100)
+                MessageBox.Show("Xóa thành công!");
+            F_QLNhanVien_Load(sender, e);
         }
 
         private void btn_ChonAnh_Click(object sender, EventArgs e)

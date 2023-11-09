@@ -27,7 +27,7 @@ namespace PharmacyManagement
             }
         }
 
-        public DataTable SelectData(string sql, List<CustomParameter> lstpara) //Lấy Db
+        public DataTable SelectData(string sql, List<CustomParameter> lstpara) 
         {
             try
             {
@@ -35,7 +35,6 @@ namespace PharmacyManagement
                 {
                     conn.Open();
                 }
-                //sql = "exec  SelectAllSinhVien";
                 cmd = new SqlCommand(sql, conn);
                 if (lstpara != null)
                 {
@@ -47,7 +46,6 @@ namespace PharmacyManagement
                 }
                 dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
-                //dt.Dispose();
                 return dt;
             }
             catch (Exception ex)
@@ -62,9 +60,8 @@ namespace PharmacyManagement
                     conn.Close();
                 }
             }
-
         }
-        public DataTable SelectDataViews(string sql, List<CustomParameter> lstpara) //Lấy Db
+        public DataTable SelectDataViews(string sql, List<CustomParameter> lstpara) 
         {
             try
             {
@@ -72,11 +69,9 @@ namespace PharmacyManagement
                 {
                     conn.Open();
                 }
-                //sql = "exec  SelectAllSinhVien";
                 cmd = new SqlCommand(sql, conn);
                 if (lstpara != null)
                 {
-                    
                     foreach (var para in lstpara)
                     {
                         cmd.Parameters.Add(para.key, SqlDbType.NChar).Value=para.value;
@@ -84,7 +79,6 @@ namespace PharmacyManagement
                 }
                 dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
-                //dt.Dispose();
                 return dt;
             }
             catch (Exception ex)
@@ -99,7 +93,6 @@ namespace PharmacyManagement
                     conn.Close();
                 }
             }
-
         }
         public DataTable LoadData(string tukhoa, string lenh)
         {
@@ -131,7 +124,6 @@ namespace PharmacyManagement
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("Loi load thong tin chi tiet " + ex.Message);
                 return null;
             }
             finally
@@ -164,7 +156,7 @@ namespace PharmacyManagement
             }
             return result;
         }
-        public int Excute(string sql, List<CustomParameter> lstpara)//insert update 
+        public int Excute(string sql, List<CustomParameter> lstpara)
         {
             try
             {
@@ -183,8 +175,9 @@ namespace PharmacyManagement
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
-                return -100;
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK,MessageBoxIcon.Error);
+         
+                   return -100;
             }
             finally
             {

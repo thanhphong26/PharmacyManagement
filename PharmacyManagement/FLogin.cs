@@ -42,11 +42,12 @@ namespace PharmacyManagement
             {
                 role = "CV03";
             }
-                FMain main = new FMain();
-                main.MSNV = txt_TaiKhoan.Text;
-                main.Show();
-                this.Hide();
-            
+            FMain main = new FMain();
+            main.MSNV = txt_TaiKhoan.Text;
+            main.MCH = txt_MatKhau.Text;
+            main.Show();
+            this.Hide();
+
 
         }
     }

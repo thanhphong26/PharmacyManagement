@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddClass.cs" />
+    <Compile Include="ConvertImage.cs" />
     <Compile Include="CustomParameter.cs" />
     <Compile Include="DAO\ChucVuDAO.cs" />
     <Compile Include="DAO\KhoDAO.cs" />
@@ -72,6 +73,12 @@
     </Compile>
     <Compile Include="F_DoanhThu.Designer.cs">
       <DependentUpon>F_DoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_NhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_NhapHang.Designer.cs">
+      <DependentUpon>F_NhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="F_PhieuNhapHang.cs">
       <SubType>Form</SubType>
@@ -157,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_LSNhapKho.resx">
       <DependentUpon>F_LSNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_NhapHang.resx">
+      <DependentUpon>F_NhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_PhieuNhapHang.resx">
       <DependentUpon>F_PhieuNhapHang.cs</DependentUpon>

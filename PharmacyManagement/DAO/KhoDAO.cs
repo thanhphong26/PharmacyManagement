@@ -94,7 +94,7 @@ namespace PharmacyManagement.DAO
             });
             return lstpara;
         }
-        public List<CustomParameter> LoadThemSanPham(string masp, string tensp, string donvi, string giaban, string chucnang, string mota, string maloai, string mansx)
+        public List<CustomParameter> LoadThemSanPham(string masp, string tensp, string donvi, string giaban, string chucnang, string mota, string maloai, string mansx, object image)
         {
             List<CustomParameter> lstpara = new List<CustomParameter>();
             lstpara.Add(new CustomParameter()
@@ -136,6 +136,11 @@ namespace PharmacyManagement.DAO
             {
                 key = "@MaNSX",
                 value = mansx
+            });
+            lstpara.Add(new CustomParameter()
+            {
+                key = "@Image",
+                value = image
             });
             return lstpara;
         }

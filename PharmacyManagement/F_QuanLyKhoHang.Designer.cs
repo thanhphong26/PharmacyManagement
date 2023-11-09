@@ -121,7 +121,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(614, 119);
+            this.label1.Location = new System.Drawing.Point(615, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(309, 32);
             this.label1.TabIndex = 48;
@@ -135,7 +135,7 @@
             this.taoMoiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(62, 244);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(230, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(80, 28);
             this.menuStrip1.TabIndex = 51;
             this.menuStrip1.Text = "menuStrip1";
             // 

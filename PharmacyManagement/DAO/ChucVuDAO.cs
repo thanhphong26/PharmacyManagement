@@ -13,7 +13,7 @@ namespace PharmacyManagement.DAO
         public DataTable DS_ChucVu()
         {
             List<CustomParameter> lstpara = new List<CustomParameter>();
-            return db.LoadData("load", "select MaChucVu from CHUC_VU");
+            return db.LoadData("load", "select * from CHUC_VU");
         }
     }
 }
