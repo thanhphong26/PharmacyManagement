@@ -40,8 +40,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdio_Nu = new System.Windows.Forms.RadioButton();
+            this.rdio_Nam = new System.Windows.Forms.RadioButton();
             this.txt_TenNV = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_MNV = new System.Windows.Forms.TextBox();
@@ -95,6 +95,7 @@
             this.txt_MaCH.Name = "txt_MaCH";
             this.txt_MaCH.Size = new System.Drawing.Size(263, 31);
             this.txt_MaCH.TabIndex = 18;
+            this.txt_MaCH.Enter += new System.EventHandler(this.txt_MNV_Enter);
             // 
             // txt_TenCuaHang
             // 
@@ -104,6 +105,7 @@
             this.txt_TenCuaHang.Name = "txt_TenCuaHang";
             this.txt_TenCuaHang.Size = new System.Drawing.Size(263, 31);
             this.txt_TenCuaHang.TabIndex = 13;
+            this.txt_TenCuaHang.Enter += new System.EventHandler(this.txt_MNV_Enter);
             // 
             // label9
             // 
@@ -143,14 +145,15 @@
             this.txt_ChucVu.Name = "txt_ChucVu";
             this.txt_ChucVu.Size = new System.Drawing.Size(196, 31);
             this.txt_ChucVu.TabIndex = 13;
+            this.txt_ChucVu.Enter += new System.EventHandler(this.txt_MNV_Enter);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.dtp_NgaySinh);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.rdio_Nu);
+            this.panel1.Controls.Add(this.rdio_Nam);
             this.panel1.Controls.Add(this.txt_TenNV);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txt_MNV);
@@ -185,30 +188,33 @@
             this.dtp_NgaySinh.Name = "dtp_NgaySinh";
             this.dtp_NgaySinh.Size = new System.Drawing.Size(154, 31);
             this.dtp_NgaySinh.TabIndex = 12;
+            this.dtp_NgaySinh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.control_MouseDown);
             // 
-            // radioButton2
+            // rdio_Nu
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(126, 246);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(57, 29);
-            this.radioButton2.TabIndex = 11;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdio_Nu.AutoSize = true;
+            this.rdio_Nu.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdio_Nu.Location = new System.Drawing.Point(126, 246);
+            this.rdio_Nu.Name = "rdio_Nu";
+            this.rdio_Nu.Size = new System.Drawing.Size(57, 29);
+            this.rdio_Nu.TabIndex = 11;
+            this.rdio_Nu.TabStop = true;
+            this.rdio_Nu.Text = "Nữ";
+            this.rdio_Nu.UseVisualStyleBackColor = true;
+            this.rdio_Nu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.control_MouseDown);
             // 
-            // radioButton1
+            // rdio_Nam
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(29, 246);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 29);
-            this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdio_Nam.AutoSize = true;
+            this.rdio_Nam.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdio_Nam.Location = new System.Drawing.Point(29, 246);
+            this.rdio_Nam.Name = "rdio_Nam";
+            this.rdio_Nam.Size = new System.Drawing.Size(71, 29);
+            this.rdio_Nam.TabIndex = 10;
+            this.rdio_Nam.TabStop = true;
+            this.rdio_Nam.Text = "Nam";
+            this.rdio_Nam.UseVisualStyleBackColor = true;
+            this.rdio_Nam.MouseDown += new System.Windows.Forms.MouseEventHandler(this.control_MouseDown);
             // 
             // txt_TenNV
             // 
@@ -218,6 +224,7 @@
             this.txt_TenNV.Name = "txt_TenNV";
             this.txt_TenNV.Size = new System.Drawing.Size(368, 31);
             this.txt_TenNV.TabIndex = 9;
+            this.txt_TenNV.Enter += new System.EventHandler(this.txt_MNV_Enter);
             // 
             // label5
             // 
@@ -238,6 +245,7 @@
             this.txt_MNV.Name = "txt_MNV";
             this.txt_MNV.Size = new System.Drawing.Size(178, 31);
             this.txt_MNV.TabIndex = 8;
+            this.txt_MNV.Enter += new System.EventHandler(this.txt_MNV_Enter);
             // 
             // txt_DiaChi
             // 
@@ -247,6 +255,7 @@
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(368, 31);
             this.txt_DiaChi.TabIndex = 11;
+            this.txt_DiaChi.Enter += new System.EventHandler(this.txt_MNV_Enter);
             // 
             // label3
             // 
@@ -276,6 +285,7 @@
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.Size = new System.Drawing.Size(263, 31);
             this.txt_SDT.TabIndex = 10;
+            this.txt_SDT.Enter += new System.EventHandler(this.txt_MNV_Enter);
             // 
             // label2
             // 
@@ -341,6 +351,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "F_ThongTinCaNhan";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.F_ThongTinCaNhan_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -366,8 +377,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DateTimePicker dtp_NgaySinh;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdio_Nu;
+        private System.Windows.Forms.RadioButton rdio_Nam;
         private System.Windows.Forms.TextBox txt_TenNV;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_MNV;

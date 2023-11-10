@@ -16,11 +16,16 @@ namespace PharmacyManagement
     public partial class FMain : Form
     {
         private String msnv = null;
-        String MCH = null;
+        private String mch = null;
         public String MSNV
         {
             get { return msnv; }
             set { msnv = value;}
+        }
+        public string MCH
+        {
+            get { return mch; }
+            set { mch = value; }
         }
         AddClass addClass = new AddClass();
         public FMain()
@@ -30,7 +35,7 @@ namespace PharmacyManagement
         }
         private void reset_color()
         {
-            btn_TrangChu.BackColor = btn_TTCN.BackColor= btn_QLKH.BackColor= btn_BanHang.BackColor = btn_NhapHang.BackColor= btn_LSGD.BackColor= btn_NhanVien.BackColor= btn_DoanhThu.BackColor= Color.FromArgb(200, 255, 255);
+            btn_TrangChu.BackColor = btn_TTCN.BackColor= btn_QLKH.BackColor= btn_BanHang.BackColor = btn_LSGD.BackColor= btn_NhanVien.BackColor= btn_DoanhThu.BackColor= Color.FromArgb(200, 255, 255);
         }
         private void btn_Exit_Click(object sender, EventArgs e)
         {
@@ -45,14 +50,18 @@ namespace PharmacyManagement
         {
             reset_color();
             btn_NhanVien.BackColor = Color.FromArgb(0, 255, 255);
-            addClass.Add_Form(new F_QLNhanVien(), pn_main);
+            F_QLNhanVien f = new F_QLNhanVien();
+            f.SetFormReference(this);
+            addClass.Add_Form(f, pn_main);
         }
 
         private void btn_TTCN_Click(object sender, EventArgs e)
         {
             reset_color();
             btn_TTCN.BackColor = Color.FromArgb(0, 255, 255);
-            addClass.Add_Form(new F_ThongTinCaNhan(), pn_main);
+            F_ThongTinCaNhan f = new F_ThongTinCaNhan();
+            f.SetFormReference(this);
+            addClass.Add_Form(f, pn_main);
         }
 
         private void btn_TrangChu_Click(object sender, EventArgs e)

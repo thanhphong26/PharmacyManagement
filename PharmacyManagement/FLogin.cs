@@ -44,6 +44,7 @@ namespace PharmacyManagement
             }
                 FMain main = new FMain();
                 main.MSNV = txt_TaiKhoan.Text;
+                main.MCH = txt_MatKhau.Text;
                 main.Show();
                 this.Hide();
             

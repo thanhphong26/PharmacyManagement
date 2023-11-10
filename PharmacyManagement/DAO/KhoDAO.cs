@@ -16,7 +16,7 @@ namespace PharmacyManagement.DAO
         }
         public DataTable LoadCbbMaLoai()
         {
-            return db.LoadData("load", "select MaLoai from LOAI_SAN_PHAM");
+            return db.LoadData("load", "select * from LOAI_SAN_PHAM");
         }
         public DataTable LoadCbbMaNSX()
         {
@@ -54,6 +54,22 @@ namespace PharmacyManagement.DAO
         {
             return db.LoadData("load", "exec AllMaNCC");
         }
+
+        public int InsertLoaiSP(List<CustomParameter> list)
+        {
+            return db.Excute("pro_ThemLoai", list);
+        }
+
+        public int DeleteLoaiSP(List<CustomParameter> list)
+        {
+            return db.Excute("pro_XoaLoai", list);
+        }
+
+        public int UpdateLoaiSP(List<CustomParameter> list)
+        {
+            return db.Excute("pro_SuaLoai", list);
+        }
+
         public List<CustomParameter> LoadPhieuNhap(string hsd, string ngaysx, string soluong, string giamotsp, string mancc, string masp, string mach)
         {
             List<CustomParameter> lstpara = new List<CustomParameter>();

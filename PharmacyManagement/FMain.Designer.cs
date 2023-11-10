@@ -38,7 +38,6 @@ namespace PharmacyManagement
             this.btn_TTCN = new System.Windows.Forms.Button();
             this.btn_QLKH = new System.Windows.Forms.Button();
             this.btn_BanHang = new System.Windows.Forms.Button();
-            this.btn_NhapHang = new System.Windows.Forms.Button();
             this.btn_LSGD = new System.Windows.Forms.Button();
             this.btn_NhanVien = new System.Windows.Forms.Button();
             this.btn_DoanhThu = new System.Windows.Forms.Button();
@@ -163,23 +162,11 @@ namespace PharmacyManagement
             this.btn_BanHang.Text = "Bán hàng";
             this.btn_BanHang.UseVisualStyleBackColor = false;
             // 
-            // btn_NhapHang
-            // 
-            this.btn_NhapHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_NhapHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NhapHang.Location = new System.Drawing.Point(0, 357);
-            this.btn_NhapHang.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_NhapHang.Name = "btn_NhapHang";
-            this.btn_NhapHang.Size = new System.Drawing.Size(293, 74);
-            this.btn_NhapHang.TabIndex = 5;
-            this.btn_NhapHang.Text = "Nhập hàng";
-            this.btn_NhapHang.UseVisualStyleBackColor = false;
-            // 
             // btn_LSGD
             // 
             this.btn_LSGD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_LSGD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LSGD.Location = new System.Drawing.Point(0, 430);
+            this.btn_LSGD.Location = new System.Drawing.Point(0, 357);
             this.btn_LSGD.Margin = new System.Windows.Forms.Padding(4);
             this.btn_LSGD.Name = "btn_LSGD";
             this.btn_LSGD.Size = new System.Drawing.Size(293, 74);
@@ -192,7 +179,7 @@ namespace PharmacyManagement
             // 
             this.btn_NhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NhanVien.Location = new System.Drawing.Point(0, 504);
+            this.btn_NhanVien.Location = new System.Drawing.Point(0, 430);
             this.btn_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.Size = new System.Drawing.Size(293, 74);
@@ -205,7 +192,7 @@ namespace PharmacyManagement
             // 
             this.btn_DoanhThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_DoanhThu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DoanhThu.Location = new System.Drawing.Point(0, 578);
+            this.btn_DoanhThu.Location = new System.Drawing.Point(0, 503);
             this.btn_DoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DoanhThu.Name = "btn_DoanhThu";
             this.btn_DoanhThu.Size = new System.Drawing.Size(293, 74);
@@ -248,7 +235,6 @@ namespace PharmacyManagement
             this.Controls.Add(this.btn_DoanhThu);
             this.Controls.Add(this.btn_NhanVien);
             this.Controls.Add(this.btn_LSGD);
-            this.Controls.Add(this.btn_NhapHang);
             this.Controls.Add(this.btn_BanHang);
             this.Controls.Add(this.btn_QLKH);
             this.Controls.Add(this.btn_TTCN);
@@ -274,7 +260,6 @@ namespace PharmacyManagement
         private System.Windows.Forms.Button btn_TTCN;
         private System.Windows.Forms.Button btn_QLKH;
         private System.Windows.Forms.Button btn_BanHang;
-        private System.Windows.Forms.Button btn_NhapHang;
         private System.Windows.Forms.Button btn_LSGD;
         private System.Windows.Forms.Button btn_NhanVien;
         private System.Windows.Forms.Button btn_DoanhThu;
