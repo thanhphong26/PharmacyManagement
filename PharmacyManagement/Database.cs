@@ -80,6 +80,7 @@ namespace PharmacyManagement
                     foreach (var para in lstpara)
                     {
                         cmd.Parameters.Add(para.key, SqlDbType.NChar).Value=para.value;
+                        //cmd.Parameters.AddWithValue(para.key,para.value);
                     }
                 }
                 dt = new DataTable();

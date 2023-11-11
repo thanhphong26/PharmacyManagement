@@ -30,6 +30,7 @@ namespace PharmacyManagement
         private FMain main;
         NhanVienDAO nhanvien = new NhanVienDAO();
         DataTable dt = new DataTable();
+        Chuyen convert = new Chuyen();
 
         public void SetFormReference(FMain form1)
         {
@@ -37,8 +38,11 @@ namespace PharmacyManagement
         }
         private void F_ThongTinCaNhan_Load(object sender, EventArgs e)
         {
+            if (main.MCH == null || main.MCH == "")
+                MessageBox.Show("Bạn đang đăng nhập với quyền admin");
+            else
+            {
             msnv = main.MSNV;
-            MessageBox.Show(msnv);
             dt = nhanvien.ThongTinNhanVien(msnv);
             DataRow dr = dt.Rows[0];
             txt_MNV.Text = dr[0].ToString();
@@ -52,6 +56,8 @@ namespace PharmacyManagement
             txt_DiaChi.Text = dr[5].ToString();
             txt_ChucVu.Text = dr[6].ToString();
             txt_TenCuaHang.Text = dr[7].ToString();
+            ptb_NhanVien.Image = convert.convertimage((byte[])dr[8]);
+            }    
         }
 
         private void txt_MNV_Enter(object sender, EventArgs e)

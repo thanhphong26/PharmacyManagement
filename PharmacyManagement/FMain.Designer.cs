@@ -43,6 +43,7 @@ namespace PharmacyManagement
             this.btn_DoanhThu = new System.Windows.Forms.Button();
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.pn_main = new System.Windows.Forms.Panel();
+            this.btn_KhachHang = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,7 +58,7 @@ namespace PharmacyManagement
             this.panel1.Controls.Add(this.btn_Exit);
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1733, 62);
             this.panel1.TabIndex = 0;
@@ -67,8 +68,9 @@ namespace PharmacyManagement
             this.pictureBox1.BackColor = System.Drawing.Color.Cyan;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(64, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(147, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -77,9 +79,10 @@ namespace PharmacyManagement
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Azure;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(56, 56);
+            this.pictureBox2.Size = new System.Drawing.Size(56, 57);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -90,7 +93,7 @@ namespace PharmacyManagement
             this.btn_MinSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_MinSize.ForeColor = System.Drawing.Color.Black;
             this.btn_MinSize.Location = new System.Drawing.Point(1635, 15);
-            this.btn_MinSize.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_MinSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_MinSize.Name = "btn_MinSize";
             this.btn_MinSize.Size = new System.Drawing.Size(37, 34);
             this.btn_MinSize.TabIndex = 1;
@@ -103,7 +106,7 @@ namespace PharmacyManagement
             this.btn_Exit.BackColor = System.Drawing.Color.Red;
             this.btn_Exit.ForeColor = System.Drawing.Color.White;
             this.btn_Exit.Location = new System.Drawing.Point(1680, 15);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(37, 34);
             this.btn_Exit.TabIndex = 0;
@@ -116,7 +119,7 @@ namespace PharmacyManagement
             this.btn_TrangChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_TrangChu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TrangChu.Location = new System.Drawing.Point(0, 62);
-            this.btn_TrangChu.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_TrangChu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_TrangChu.Name = "btn_TrangChu";
             this.btn_TrangChu.Size = new System.Drawing.Size(293, 74);
             this.btn_TrangChu.TabIndex = 1;
@@ -128,8 +131,8 @@ namespace PharmacyManagement
             // 
             this.btn_TTCN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_TTCN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TTCN.Location = new System.Drawing.Point(0, 136);
-            this.btn_TTCN.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_TTCN.Location = new System.Drawing.Point(0, 135);
+            this.btn_TTCN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_TTCN.Name = "btn_TTCN";
             this.btn_TTCN.Size = new System.Drawing.Size(293, 74);
             this.btn_TTCN.TabIndex = 2;
@@ -141,8 +144,8 @@ namespace PharmacyManagement
             // 
             this.btn_QLKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_QLKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_QLKH.Location = new System.Drawing.Point(0, 210);
-            this.btn_QLKH.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_QLKH.Location = new System.Drawing.Point(0, 208);
+            this.btn_QLKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_QLKH.Name = "btn_QLKH";
             this.btn_QLKH.Size = new System.Drawing.Size(293, 74);
             this.btn_QLKH.TabIndex = 3;
@@ -154,8 +157,8 @@ namespace PharmacyManagement
             // 
             this.btn_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_BanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BanHang.Location = new System.Drawing.Point(0, 283);
-            this.btn_BanHang.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_BanHang.Location = new System.Drawing.Point(0, 281);
+            this.btn_BanHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_BanHang.Name = "btn_BanHang";
             this.btn_BanHang.Size = new System.Drawing.Size(293, 74);
             this.btn_BanHang.TabIndex = 4;
@@ -166,8 +169,8 @@ namespace PharmacyManagement
             // 
             this.btn_LSGD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_LSGD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LSGD.Location = new System.Drawing.Point(0, 357);
-            this.btn_LSGD.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_LSGD.Location = new System.Drawing.Point(0, 427);
+            this.btn_LSGD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_LSGD.Name = "btn_LSGD";
             this.btn_LSGD.Size = new System.Drawing.Size(293, 74);
             this.btn_LSGD.TabIndex = 6;
@@ -179,8 +182,8 @@ namespace PharmacyManagement
             // 
             this.btn_NhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NhanVien.Location = new System.Drawing.Point(0, 430);
-            this.btn_NhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_NhanVien.Location = new System.Drawing.Point(0, 500);
+            this.btn_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.Size = new System.Drawing.Size(293, 74);
             this.btn_NhanVien.TabIndex = 7;
@@ -192,8 +195,8 @@ namespace PharmacyManagement
             // 
             this.btn_DoanhThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_DoanhThu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DoanhThu.Location = new System.Drawing.Point(0, 503);
-            this.btn_DoanhThu.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_DoanhThu.Location = new System.Drawing.Point(0, 573);
+            this.btn_DoanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_DoanhThu.Name = "btn_DoanhThu";
             this.btn_DoanhThu.Size = new System.Drawing.Size(293, 74);
             this.btn_DoanhThu.TabIndex = 8;
@@ -207,22 +210,36 @@ namespace PharmacyManagement
             this.btn_DangXuat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
             this.btn_DangXuat.Location = new System.Drawing.Point(0, 788);
-            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(293, 74);
             this.btn_DangXuat.TabIndex = 9;
             this.btn_DangXuat.Text = "Đăng xuất";
             this.btn_DangXuat.UseVisualStyleBackColor = false;
+            this.btn_DangXuat.Click += new System.EventHandler(this.btn_DangXuat_Click);
             // 
             // pn_main
             // 
             this.pn_main.BackColor = System.Drawing.SystemColors.Control;
             this.pn_main.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pn_main.Location = new System.Drawing.Point(293, 62);
-            this.pn_main.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pn_main.Name = "pn_main";
             this.pn_main.Size = new System.Drawing.Size(1440, 800);
             this.pn_main.TabIndex = 10;
+            // 
+            // btn_KhachHang
+            // 
+            this.btn_KhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_KhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_KhachHang.Location = new System.Drawing.Point(0, 354);
+            this.btn_KhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_KhachHang.Name = "btn_KhachHang";
+            this.btn_KhachHang.Size = new System.Drawing.Size(293, 74);
+            this.btn_KhachHang.TabIndex = 11;
+            this.btn_KhachHang.Text = "Khách hàng";
+            this.btn_KhachHang.UseVisualStyleBackColor = false;
+            this.btn_KhachHang.Click += new System.EventHandler(this.btn_KhachHang_Click);
             // 
             // FMain
             // 
@@ -230,6 +247,7 @@ namespace PharmacyManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1733, 862);
+            this.Controls.Add(this.btn_KhachHang);
             this.Controls.Add(this.pn_main);
             this.Controls.Add(this.btn_DangXuat);
             this.Controls.Add(this.btn_DoanhThu);
@@ -241,7 +259,7 @@ namespace PharmacyManagement
             this.Controls.Add(this.btn_TrangChu);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -269,6 +287,7 @@ namespace PharmacyManagement
         private System.Windows.Forms.Button btn_MinSize;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btn_KhachHang;
     }
 }
 

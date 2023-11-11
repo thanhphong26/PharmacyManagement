@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -95,6 +95,26 @@ namespace PharmacyManagement
             reset_color();
             btn_DoanhThu.BackColor = Color.FromArgb(0, 255, 255);
             addClass.Add_Form(new F_DoanhThu(), pn_main);
+        }
+
+        private void btn_DangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn đăng xuất không!", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.OK) 
+            {
+                    this.Hide();
+                    FLogin fLogin = new FLogin();
+                    fLogin.ShowDialog();
+            }
+        }
+
+        private void btn_KhachHang_Click(object sender, EventArgs e)
+        {
+            reset_color();
+            btn_DoanhThu.BackColor = Color.FromArgb(0, 255, 255);
+            F_KhachHang f = new F_KhachHang();
+            f.SetFormReference(this);
+            addClass.Add_Form(f, pn_main);
         }
     }
 }

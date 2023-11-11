@@ -23,10 +23,11 @@ namespace PharmacyManagement
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            List<CustomParameter> list = new List<CustomParameter> { new CustomParameter() { key = "@MaLoai", value = txt_MaLoai.Text}, 
-                                                                     new CustomParameter() {key = "@TenLoai", value = txt_TenLoai.Text},
-                                                                     new CustomParameter() {key = "@MaDanhMucChinh", value = cb_MaDanhMucChinh.Text} };
-            int count = kho.InsertLoaiSP(list);
+            List<CustomParameter> list = new List<CustomParameter> 
+            { new CustomParameter() { key = "@MaLoai", value = txt_MaLoai.Text}, 
+              new CustomParameter() {key = "@TenLoai", value = txt_TenLoai.Text},
+              new CustomParameter() {key = "@MaDanhMucChinh", value = cb_MaDanhMucChinh.Text} };
+            int count = kho.    (list);
             if (count > 0)
             {
                 MessageBox.Show("Thêm thành công!");

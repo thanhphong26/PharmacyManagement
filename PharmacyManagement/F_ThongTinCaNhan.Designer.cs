@@ -53,13 +53,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptb_NhanVien = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_NhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -327,17 +327,17 @@
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // ptb_NhanVien
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 297);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 400);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.ptb_NhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptb_NhanVien.Image = ((System.Drawing.Image)(resources.GetObject("ptb_NhanVien.Image")));
+            this.ptb_NhanVien.Location = new System.Drawing.Point(49, 297);
+            this.ptb_NhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptb_NhanVien.Name = "ptb_NhanVien";
+            this.ptb_NhanVien.Size = new System.Drawing.Size(300, 400);
+            this.ptb_NhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_NhanVien.TabIndex = 18;
+            this.ptb_NhanVien.TabStop = false;
             // 
             // F_ThongTinCaNhan
             // 
@@ -347,7 +347,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptb_NhanVien);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "F_ThongTinCaNhan";
             this.Text = "Form1";
@@ -359,7 +359,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_NhanVien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -390,6 +390,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptb_NhanVien;
     }
 }
